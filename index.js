@@ -50,7 +50,7 @@ router.post("/add-album", async (ctx) => {
     client.release();
   }
 });
-// app.listen(process.env?.port || 3004, () => {
-//   console.log("Server listening on 3004");
-// });
-module.exports = router;
+app.listen(3004, () => {
+  console.log("Server listening on 3004");
+});
+//module.exports = router;
