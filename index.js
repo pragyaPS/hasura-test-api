@@ -12,10 +12,10 @@ app.use(router.routes()).use(router.allowedMethods());
 
 const pool = new Pool({
   user: "postgres",
-  host: "localhost",
-  database: "Hasura-db",
-  password: "admin@123",
-  port: 5433,
+  host: "hasura-test-rds.cqrnqcmido7u.ap-south-1.rds.amazonaws.com",
+  database: "postgres",
+  password: "admin123",
+  port: 5432,
 });
 
 router.get("/", (ctx, next) => {
@@ -50,7 +50,8 @@ router.post("/add-album", async (ctx) => {
     client.release();
   }
 });
-app.listen(process.env.PORT || 3004, () => {
-  console.log("Server listening on 3004");
+let port = process.env.PORT || 3004;
+app.listen(port, () => {
+  console.log(`Server listening on ${port}`);
 });
 //module.exports = router;
