@@ -1,7 +1,7 @@
 {
-  "name": "hasura",
+  "name": "hasura-test-api",
   "version": "1.0.0",
-  "description": "hasura-api-server",
+  "description": "hasura-test-api",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
